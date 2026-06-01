@@ -13,6 +13,7 @@ phases:
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
     commands:
+      - cd Project1_User_Service
       - echo Build started on `date`
       - mvn clean package -DskipTests
       - echo Building the Docker image...
